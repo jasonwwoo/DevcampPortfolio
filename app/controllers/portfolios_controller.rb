@@ -23,7 +23,7 @@ class PortfoliosController < ApplicationController
 				format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
 				format.json { render :show, status: :created, location: @portfolio_item }
 			else
-				format.html { render :new }
+				format.html { render :new, notice: 'Failed to create portfolio item' }
 				format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
 			end
 		end
