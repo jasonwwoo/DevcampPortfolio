@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+	layout 'portfolio'
+
 	def index
 		@portfolio_items = Portfolio.all
 	end
@@ -14,7 +16,7 @@ class PortfoliosController < ApplicationController
 	def new
 		@portfolio_item = Portfolio.new
 		3.times { @portfolio_item.technologies.build }
-	end3333
+	end
 
 	def create
 		@portfolio_item = Portfolio.new(portfolio_params)
@@ -49,7 +51,7 @@ class PortfoliosController < ApplicationController
 	end
 
 	def show
-		@portfolio_params = Portfolio.find(params[:id])
+		@portfolio_item = Portfolio.find(params[:id])
 	end
 
 	def destroy
@@ -75,5 +77,5 @@ class PortfoliosController < ApplicationController
 																	 technologies_attributes: [:name]
 																 	)
 		end
- end
+
 end
