@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin)%>
 
 <h1>Blogs</h1>
 
