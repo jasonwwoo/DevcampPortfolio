@@ -59,3 +59,4 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'jason_view_tool', git: "https://github.com/jasonwwoo/jason_view_tool"
+gem 'petergate', '~> 1.8', '>= 1.8.1'
