@@ -12,14 +12,17 @@
   </head>
 
   <body>
-    <%= render "blog_header"%>
+    <!-- Start of Header -->
+    <div class="container">
+      <%= render "blog_header"%>
+      <%= render "blog_jumbotron" if current_page?("/blogs")%>
+    </div>
     <main role="main" class="container">
-      <%= yield %>
-  </main>
-
-    <footer class="blog-footer">
-      <%= source_helper("blog") %>
-      <%= render "shared/application_footer" %>
-    </footer>
+      <div class="row">
+        <%= yield %>
+        <%= render "blog_sidebar" %>
+      </div>
+    </main>
+    <%= render "blog_footer"%>
   </body>
 </html>
