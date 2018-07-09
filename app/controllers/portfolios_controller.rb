@@ -1,10 +1,10 @@
 class PortfoliosController < ApplicationController
 	before_action :set_portfolio_item, only: [:edit, :update, :destroy, :show]
 	layout 'portfolio'
-	access all: [:show, :index, :angular, :ruby_on_rails], user: {except: [:destroy, :new, :create, :update, :edit ]}, site_admin: :all
+	access all: [:show, :index, :angular, :ruby_on_rails], user: {except: [:destroy, :new, :create, :update, :edit, :sort ]}, site_admin: :all
 
 	def index
-		@portfolio_items = Portfolio.all
+		@portfolio_items = Portfolio.by_position
 	end
 
 	def angular
@@ -18,6 +18,13 @@ class PortfoliosController < ApplicationController
 	def new
 		@portfolio_item = Portfolio.new
 		3.times { @portfolio_item.technologies.build }
+	end
+
+	def sort
+	  params[:order].each do |key, value|
+			Portfolio.find(value[:id]).update(position: value[:position])
+		end
+		head :ok
 	end
 
 	def create
