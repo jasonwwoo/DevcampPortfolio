@@ -1,0 +1,10 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Welcome</h1>
+    <p class="lead text-muted">Here is a list of my projects, both completed and still in progress. Enjoy</p>
+    <p>
+      <%= link_to "Create new Porfolio Ruby", new_portfolio_path, class: "btn btn-primary my-2" if logged_in?(:site_admin)%>
+      <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+    </p>
+  </div>
+</section>

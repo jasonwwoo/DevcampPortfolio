@@ -1,15 +1,22 @@
-<%= image_tag @portfolio_item.main_image %>
+<div class="container mt-5">
 
-<h1><%= @portfolio_item.title%></h1>
-<em><%= @portfolio_item.subtitle%></em>
-<p><%= @portfolio_item.body%></p>
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image, class: "img-top rounded" %>
+    </div>
 
-<h2>Technologies Used:</h2>
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title%></h1>
 
-<% @portfolio_item.technologies.each do |technology| %>
-    <p><%= technology.name %></p>
-<% end %>
+      <h4 class="font-italic"><%= @portfolio_item.subtitle%></h4>
+      <p><%= @portfolio_item.body%></p>
 
-<hr>
- <%= params.inspect %>
-<hr>
+      <hr>
+
+      <h2>Technologies Used:</h2>
+
+      <% @portfolio_item.technologies.each do |technology| %>
+        <p><%= technology.name %></p>
+      <% end %>
+    </div>
+  </div>

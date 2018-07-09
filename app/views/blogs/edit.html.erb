@@ -1,7 +1,10 @@
-<h1>Editing Blog</h1>
+<div class="col-md-9 blog-main">
 
-<%= render 'form', blog: @blog %>
+  <h1>Editing Blog</h1>
 
-<%= link_to 'Show', @blog, class: "btn btn-outline-info" %>
+  <%= render 'form', blog: @blog %>
 
-<%= link_to 'Back', blogs_path, class: "btn btn-outline-info" %>
+  <%= link_to 'Show', @blog, class: "btn btn-outline-info" %>
+
+  <%= link_to 'Back', blogs_path, class: "btn btn-outline-info" %>
+</div>
