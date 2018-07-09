@@ -33,7 +33,7 @@
 <%= form.fields_for :technologies do |technology_form| %>
 <% count = 1 %>
 <div class="form-group">
-  <%= technology_form.label :name, "Technology #{count}"%>
+  <%= technology_form.label :name, "Technology #{technology_form}"%>
   <%= technology_form.text_field :name, class: "form-control",  rows: "10" %>
 </div>
 <% count = count+1%>
