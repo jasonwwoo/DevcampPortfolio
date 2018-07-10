@@ -2,7 +2,7 @@
 
   <div class="row pt-3">
     <div class="col-md-7">
-      <%= image_tag @portfolio_item.main_image.to_s, class: "img-top rounded", width: "100%" %>
+      <%= image_tag portfolio_img(@portfolio_item.thumb_image, 'main').to_s , width: "100%" %>
     </div>
 
     <div class="col-md-5">
@@ -19,4 +19,5 @@
         <p><%= technology %></p>
       <% end %>
     </div>
+  </div>
   </div>
