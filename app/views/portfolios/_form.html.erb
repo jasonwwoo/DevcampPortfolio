@@ -54,24 +54,19 @@
 
 <div class="row">
   <div class="col-md-12">
+    <h4 class="pt-2 pb-2">Technologies Used</h4>
+    <%= form.fields_for :technologies do |technology_form| %>
+      <%= render 'technology_fields', form: technology_form %>
+    <% end %>
+    <div>
+      <%= link_to_add_association 'Add Technology', form, :technologies, form_name: 'form' %>
+    </div>
 
+    <div class="actions">
+      <%= form.submit "Update", class: "btn btn-primary" %>
+    </div>
 
-<h4 class="pt-2 pb-2">Technologies Used</h4>
-
-<%= form.fields_for :technologies do |technology_form| %>
-<% count = 1 %>
-<div class="form-group">
-  <%= technology_form.label :name, "Technology #{technology_form}"%>
-  <%= technology_form.text_field :name, class: "form-control",  rows: "10" %>
-</div>
-<% count = count+1%>
-<% end %>
-
-<div class="actions">
-  <%= form.submit "Update", class: "btn btn-primary" %>
-</div>
-
-</div>
+  </div>
 </div>
 </div>
 </div>

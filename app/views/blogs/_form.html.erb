@@ -14,12 +14,12 @@
 
   <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, class: "form-control" %>
+    <%= form.text_field :title, class: "form-control", placeholder: 'Title' %>
   </div>
 
   <div class="form-group">
     <%= form.label :body %>
-    <%= form.text_area :body, class: "form-control", rows: "10" %>
+    <%= form.text_area :body, class: "form-control", rows: "10", placeholder: 'Content' %>
   </div>
 
   <div class="form-group">
@@ -29,3 +29,21 @@
 
 
 </form>
+<!--
+<%= form_tag('/blogs') do %>
+  <div class="form-group">
+    <%= label_tag 'blog[title]', 'Blog title'%>
+    <%= text_field_tag 'blog[title]', blog.title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag 'blog[body]', 'Blog body'%>
+    <%= text_area_tag 'blog[body]', blog.body, class: "form-control", rows: 8 %>
+  </div>
+
+  <div class="form-group">
+    <%= submit_tag 'Save', class: "btn btn-primary" %>
+  </div>
+
+<% end%>
+ -->
