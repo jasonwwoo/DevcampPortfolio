@@ -10,7 +10,7 @@ module SocialTool
     # client.user_timeline("realDonaldTrump").take(6).collect do |tweet|
     #   "#{tweet.text}"
     # end
-    client.search("#rails", result_type: "recent").take(6).collect do |tweet|
+    client.search("#trump", result_type: "recent").take(6).collect do |tweet|
       "#{tweet.user.screen_name}: #{tweet.text}"
     end
 
