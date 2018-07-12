@@ -2,7 +2,7 @@
 <form class="" action="index.html" method="post">
   <% if blog.errors.any? %>
     <%= blog.errors.full_messages.each do |error|  %>
-      <%= js add_gritter(error, title: "Jason Woo Portfolio", sticky: false) %>
+      <%=  alert_generator error%>
     <% end %>
   <% end %>
 
