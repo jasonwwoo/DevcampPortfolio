@@ -1,0 +1,14 @@
+<main role="main" class="inner cover">
+  <h1 class="cover-heading">Twitter API</h1>
+  <div class="row text-dark">
+  <% @tweets.each do |tweet| %>
+    <div class="col-md-6">
+      <div class="tech-news">
+        <div class="card p-2">
+          <%= tweet %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+</marowin>
