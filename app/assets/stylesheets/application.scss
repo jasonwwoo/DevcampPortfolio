@@ -40,7 +40,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 55em;
 }
 
 
@@ -124,4 +124,8 @@ body {
    transform: translateX(-50%) translateY(-50%);
    background: image-url('home_bg.jpg') no-repeat;
    background-size:cover;
+ }
+
+ .tech-news a {
+   color: gray;
  }
