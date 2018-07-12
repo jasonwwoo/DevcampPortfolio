@@ -11,17 +11,7 @@
       <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-outline-primary"%>
     <% end %>
   </div>
-
-    <% unless current_user.is_a? GuestUser %>
-      <%= form_for @comment, url: '#' do |f| %>
-        <div class="form-group">
-          <%= f.label :content%>
-          <%= f.text_area :content, class: 'form-control'%>
-        </div>
-
-        <div> <%= f.submit 'Post Comment', class: 'btn btn-primary' %></div>
-      <% end %>
-    <% end %>
+  <%= render 'comments/comment_form' %>
   <%= render @blog.comments %>
   <!-- Start of comments -->
 
