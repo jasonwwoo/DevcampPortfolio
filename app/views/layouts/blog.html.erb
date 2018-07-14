@@ -14,16 +14,16 @@
   <body>
     <!-- Start of Header -->
     <div class="container mb-2">
-      <%= render "blog_header"%>
+      <%= render "shared/blog_header"%>
       <%= render "blog_jumbotron" if current_page?("/blogs")%>
     </div>
     <main role="main" class="container">
       <div class="row">
         <%= yield %>
-        <%= render "blog_sidebar" %>
+        <%= render "shared/blog_sidebar" %>
       </div>
     </main>
-    <%= render "blog_footer"%>
+    <%= render "shared/blog_footer"%>
 
     <%= alerts %>
   </body>
