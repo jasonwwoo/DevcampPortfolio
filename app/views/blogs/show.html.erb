@@ -1,4 +1,4 @@
-<div class="col-md-8 blog-main">
+<div class="col-md-8 blog-main mb-5">
   <p id="notice"><%= notice %></p>
   <div class="blog-post">
     <h2 class="blog-post-title"><%= link_to @blog.title, @blog, class: "text-muted font-italic" %></h2>
@@ -11,4 +11,11 @@
       <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-outline-primary"%>
     <% end %>
   </div>
+  <%= render 'comments/comment_form' %>
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
+  </div>
+  <!-- Start of comments -->
+
+  <!-- End of comments -->
 </div>
