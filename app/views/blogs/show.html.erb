@@ -4,7 +4,7 @@
     <p class="blog-post-meta">Published
       <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</p >
       <h4> <%= @blog.topic.title %></h4>
-    <p><%= @blog.body %></p>
+    <p><%= markdown @blog.body %></p>
     <%= link_to 'Back', blogs_path, class: "btn btn-outline-primary" %>
 
     <% if logged_in?(:site_admin) %>
