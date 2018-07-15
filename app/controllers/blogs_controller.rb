@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
     else
       @blogs = Blog.recent.published.page(params[:page]).per(5)
     end
-    @page_title = 'My Portfolio Blog'
+    @page_title = 'Jason Woo | Blog'
   end
 
   # GET /blogs/1
@@ -82,7 +82,7 @@ class BlogsController < ApplicationController
     elsif @blog.published?
       @blog.draft!
     end
-    
+
     redirect_to blogs_url, notice: 'Post status has been updated!'
   end
 
