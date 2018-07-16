@@ -3,6 +3,6 @@
   <p class="blog-post-meta">Published
     <%= distance_of_time_in_words(blog.created_at, Time.now) %>
   </p>
-  <p><%= blog.body %></p>
+  <p><%= markdown blog.body %></p>
   <%= render partial: 'blogs/admin_actions', locals: {blog: blog} %>
 </div>
