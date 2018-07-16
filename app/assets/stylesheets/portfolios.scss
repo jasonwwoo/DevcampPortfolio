@@ -1,6 +1,23 @@
 @import "bootstrap";
 @import "jquery-ui";
 @import "gritter";
+@font-face {
+  font-family: 'Lato', sans-serif;
+  src: font-url('Lato-Regular.tff')
+}
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: font-url('Raleway-Regular.tff')
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+}
+
 
 :root {
   --jumbotron-padding-y: 3rem;

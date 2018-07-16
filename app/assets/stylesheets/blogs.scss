@@ -1,8 +1,20 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "gritter";
+@font-face {
+  font-family: 'Lato', sans-serif;
+  src: font-url('Lato-Regular.tff')
+}
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: font-url('Raleway-Regular.tff')
+}
 
 /* stylelint-disable selector-list-comma-newline-after */
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+}
 
 .blog-header {
   line-height: 1;
