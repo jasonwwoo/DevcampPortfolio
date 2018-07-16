@@ -8,7 +8,7 @@ module PortfoliosHelper
       img
     elsif type == 'thumb'
       image_generator(height: '350', width: '200')
-    elsif type = 'main'
+    elsif type == 'main'
       image_generator(height: '600', width: '400')
     end
   end
